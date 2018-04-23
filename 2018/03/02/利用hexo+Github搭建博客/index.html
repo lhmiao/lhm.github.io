@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="利用hexo+Github搭建博客步骤 安装git  git的安装与使用可以参见廖雪峰的git教程  安装nodejs  安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功  使用npm命令安装Hexo  在命令行输入命令： npm insta">
+<meta name="description" content="安装git   git的安装与使用可以参见廖雪峰的git教程 安装nodejs   安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功 使用npm命令安装Hexo   在命令行输入命令：    npm install -g hexo-cli 创">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用hexo+Github搭建博客">
 <meta property="og:url" content="http://yoursite.com/2018/03/02/利用hexo+Github搭建博客/index.html">
 <meta property="og:site_name" content="Lhmiao&#39;s Blog">
-<meta property="og:description" content="利用hexo+Github搭建博客步骤 安装git  git的安装与使用可以参见廖雪峰的git教程  安装nodejs  安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功  使用npm命令安装Hexo  在命令行输入命令： npm insta">
+<meta property="og:description" content="安装git   git的安装与使用可以参见廖雪峰的git教程 安装nodejs   安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功 使用npm命令安装Hexo   在命令行输入命令：    npm install -g hexo-cli 创">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-02T05:26:21.451Z">
+<meta property="og:updated_time" content="2018-04-23T13:42:50.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用hexo+Github搭建博客">
-<meta name="twitter:description" content="利用hexo+Github搭建博客步骤 安装git  git的安装与使用可以参见廖雪峰的git教程  安装nodejs  安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功  使用npm命令安装Hexo  在命令行输入命令： npm insta">
+<meta name="twitter:description" content="安装git   git的安装与使用可以参见廖雪峰的git教程 安装nodejs   安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功 使用npm命令安装Hexo   在命令行输入命令：    npm install -g hexo-cli 创">
 
 
 
@@ -299,72 +299,48 @@
       
 
       
-        <h1 id="利用hexo-Github搭建博客步骤"><a href="#利用hexo-Github搭建博客步骤" class="headerlink" title="利用hexo+Github搭建博客步骤"></a>利用hexo+Github搭建博客步骤</h1><ol>
-<li><p><strong>安装git</strong> </p>
-<p>git的安装与使用可以参见<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a></p>
-</li>
-<li><p><strong>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">nodejs</a></strong> </p>
-<p>安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功</p>
-</li>
-<li><p><strong>使用npm命令安装Hexo</strong> </p>
-<p>在命令行输入命令：</p>
-<p><code>npm install -g hexo-cli</code></p>
-</li>
-<li><p><strong>创建一个文件夹来放置博客相关文件，假设文件夹名为blog</strong> </p>
-<p>在准备放置blog文件夹的地方按shift+鼠标右键，点击<em>在此处打开命令窗口</em></p>
-<p>依次输入以下命令：</p>
-<p><code>hexo init blog</code> ：创建blog文件夹并初始化</p>
-<p><code>cd blog</code> ：进入blog文件夹</p>
-<p><code>npm install</code> ：安装所需相关文件</p>
-</li>
-<li><p><strong>在本地进行测试</strong> </p>
-<p><code>hexo new &lt;filename&gt;</code>  ：发布的文章名，待发布的文章以md形式保持在<em>blog/source/_posts</em> ，也可以手动创建md文件并放置到该目录</p>
-<p><code>hexo g</code>  ：生成博客文章</p>
-<p><code>hexo s</code>  ：在本地预览</p>
-<p>然后可在浏览器输入地址：localhost:4000 预览博客效果</p>
-</li>
-<li><p><strong>配置</strong> </p>
-<p>网站的设置大部分都在 <em>_config.yml</em> 文件中，详细配置可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
-<p>下面只列出简单常用配置</p>
+        <h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p>   git的安装与使用可以参见<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的git教程</a></p>
+<h1 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">nodejs</a></h1><p>   安装Node.js会包含环境变量及npm的安装。安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v，若都显示版本号则表示二者安装成功</p>
+<h1 id="使用npm命令安装Hexo"><a href="#使用npm命令安装Hexo" class="headerlink" title="使用npm命令安装Hexo"></a>使用npm命令安装Hexo</h1><p>   在命令行输入命令：</p>
+<p>   <code>npm install -g hexo-cli</code></p>
+<h1 id="创建一个文件夹来放置博客相关文件，假设文件夹名为blog"><a href="#创建一个文件夹来放置博客相关文件，假设文件夹名为blog" class="headerlink" title="创建一个文件夹来放置博客相关文件，假设文件夹名为blog"></a>创建一个文件夹来放置博客相关文件，假设文件夹名为blog</h1><p>   在准备放置blog文件夹的地方按shift+鼠标右键，点击<em>在此处打开命令窗口</em></p>
+<p>   依次输入以下命令：</p>
+<p>   <code>hexo init blog</code> ：创建blog文件夹并初始化</p>
+<p>   <code>cd blog</code> ：进入blog文件夹</p>
+<p>   <code>npm install</code> ：安装所需相关文件</p>
+<h1 id="在本地进行测试"><a href="#在本地进行测试" class="headerlink" title="在本地进行测试"></a>在本地进行测试</h1><p>   <code>hexo new &lt;filename&gt;</code>  ：发布的文章名，待发布的文章以md形式保持在<em>blog/source/_posts</em> ，也可以手动创建md文件并放置到该目录</p>
+<p>   <code>hexo g</code>  ：生成博客文章</p>
+<p>   <code>hexo s</code>  ：在本地预览</p>
+<p>   然后可在浏览器输入地址：localhost:4000 预览博客效果</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>   网站的设置大部分都在 <em>_config.yml</em> 文件中，详细配置可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
+<p>   下面只列出简单常用配置</p>
 <ul>
 <li>title - &gt; 网站标题</li>
 <li>subtitle - &gt; 网站副标题</li>
 <li>description - &gt; 网站描述</li>
 <li>author - &gt; 作者姓名</li>
 <li>language - &gt; 网站使用的语言</li>
-<li>theme - &gt; 使用的主题</li>
-</ul>
+<li><p>theme - &gt; 使用的主题</p>
 <p>注：<strong>进行配置时，需要在冒号:后加一个英文空格</strong></p>
 <p><code>title: My Blog</code></p>
 </li>
-<li><p><strong>更换主题</strong></p>
-<p>如果不满意hexo的默认主题，可在官网<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a> 查看并更换其他主题</p>
-<p>7.1 下载主题资源，假设下载的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a> ：</p>
-<p><code>git clone git://github.com/iissnan/hexo-theme-next themes/next</code></p>
-<p>7.2 修改 <em>_config.yml</em> 配置文件：</p>
-<p><code>theme: next</code></p>
-<p>同时可以在 <em>themes/next/_config.yml</em> 对next主题进行设置</p>
-<p>预览效果：</p>
-<p><code>hexo clean</code> ：清除缓存文件</p>
-<p><code>hexo g</code> ：按 <em>_config.yml</em> 中设定的theme生成博客</p>
-<p><code>hexo s</code> ：在本地预览</p>
-</li>
-<li><p><strong>部署到git</strong> </p>
-<p>8.1 创建一个名为：&lt;账户名&gt;.github.io 的仓库</p>
-<p>8.2 安装 hexo-deployer-git：</p>
-<p><code>npm install hexo-deployer-git --save</code></p>
-<p>8.3 配置<em>_config.yml</em> 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 仓库地址.git</span><br><span class="line">  branch: 分支名（默认为master分支）</span><br></pre></td></tr></table></figure>
-<p>8.4 部署：</p>
-<p><code>hexo d</code></p>
-<p>注：每次更改完主题配置，都要按以下步骤：</p>
-<p><code>hexo clean</code> ：清除缓存</p>
-<p><code>hexo g</code> ：按当前主题配置生成</p>
-<p><code>hexo d</code> ：部署</p>
-<p>8.5 可通过 https://用户名.github.io 来访问博客</p>
-</li>
-</ol>
-
+</ul>
+<h1 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h1><p>   如果不满意hexo的默认主题，可在官网<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题页面</a> 查看并更换其他主题</p>
+<h2 id="下载主题资源，假设下载的是hexo-theme-next"><a href="#下载主题资源，假设下载的是hexo-theme-next" class="headerlink" title="下载主题资源，假设下载的是hexo-theme-next"></a>下载主题资源，假设下载的是<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></h2><p>   <code>git clone git://github.com/iissnan/hexo-theme-next themes/next</code></p>
+<h2 id="修改-config-yml-配置文件："><a href="#修改-config-yml-配置文件：" class="headerlink" title="修改 _config.yml 配置文件："></a>修改 <em>_config.yml</em> 配置文件：</h2><p>   <code>theme: next</code></p>
+<p>   同时可以在 <em>themes/next/_config.yml</em> 对next主题进行设置</p>
+<p>   预览效果：</p>
+<p>   <code>hexo clean</code> ：清除缓存文件</p>
+<p>   <code>hexo g</code> ：按 <em>_config.yml</em> 中设定的theme生成博客</p>
+<p>   <code>hexo s</code> ：在本地预览</p>
+<h1 id="部署到git"><a href="#部署到git" class="headerlink" title="部署到git"></a>部署到git</h1><h2 id="创建一个名为：-lt-账户名-gt-github-io-的仓库"><a href="#创建一个名为：-lt-账户名-gt-github-io-的仓库" class="headerlink" title="创建一个名为：&lt;账户名&gt;.github.io 的仓库"></a>创建一个名为：&lt;账户名&gt;.github.io 的仓库</h2><h2 id="安装-hexo-deployer-git："><a href="#安装-hexo-deployer-git：" class="headerlink" title="安装 hexo-deployer-git："></a>安装 hexo-deployer-git：</h2><p>   <code>npm install hexo-deployer-git --save</code></p>
+<h2 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置_config.yml 文件"></a>配置<em>_config.yml</em> 文件</h2>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 仓库地址.git</span><br><span class="line">  branch: 分支名（默认为master分支）</span><br></pre></td></tr></table></figure>
+<h2 id="部署："><a href="#部署：" class="headerlink" title="部署："></a>部署：</h2><p>   <code>hexo d</code></p>
+<p>   注：每次更改完主题配置，都要按以下步骤：</p>
+<p>   <code>hexo clean</code> ：清除缓存</p>
+<p>   <code>hexo g</code> ：按当前主题配置生成</p>
+<p>   <code>hexo d</code> ：部署</p>
+<h2 id="可通过-https-用户名-github-io-来访问博客"><a href="#可通过-https-用户名-github-io-来访问博客" class="headerlink" title="可通过 https://用户名.github.io 来访问博客"></a>可通过 https://用户名.github.io 来访问博客</h2>
       
     </div>
     
@@ -473,7 +449,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,7 +486,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#利用hexo-Github搭建博客步骤"><span class="nav-number">1.</span> <span class="nav-text">利用hexo+Github搭建博客步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装git"><span class="nav-number">1.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装nodejs"><span class="nav-number">2.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用npm命令安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">使用npm命令安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建一个文件夹来放置博客相关文件，假设文件夹名为blog"><span class="nav-number">4.</span> <span class="nav-text">创建一个文件夹来放置博客相关文件，假设文件夹名为blog</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在本地进行测试"><span class="nav-number">5.</span> <span class="nav-text">在本地进行测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">6.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更换主题"><span class="nav-number">7.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载主题资源，假设下载的是hexo-theme-next"><span class="nav-number">7.1.</span> <span class="nav-text">下载主题资源，假设下载的是hexo-theme-next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改-config-yml-配置文件："><span class="nav-number">7.2.</span> <span class="nav-text">修改 _config.yml 配置文件：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到git"><span class="nav-number">8.</span> <span class="nav-text">部署到git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个名为：-lt-账户名-gt-github-io-的仓库"><span class="nav-number">8.1.</span> <span class="nav-text">创建一个名为：&lt;账户名&gt;.github.io 的仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-hexo-deployer-git："><span class="nav-number">8.2.</span> <span class="nav-text">安装 hexo-deployer-git：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-config-yml-文件"><span class="nav-number">8.3.</span> <span class="nav-text">配置_config.yml 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署："><span class="nav-number">8.4.</span> <span class="nav-text">部署：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可通过-https-用户名-github-io-来访问博客"><span class="nav-number">8.5.</span> <span class="nav-text">可通过 https://用户名.github.io 来访问博客</span></a></li></ol></li></ol></div>
             
 
           </div>

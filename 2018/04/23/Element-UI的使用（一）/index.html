@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="安装 npm i element-ui - S  引入Element这里仅记录完整引入，按需引入可参加官方文档n 在 main.js 中写入以下内容：1234567891011import Vue from &apos;vue&apos;;import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;import Ap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Element UI的使用（一）">
+<meta property="og:url" content="http://yoursite.com/2018/04/23/Element-UI的使用（一）/index.html">
+<meta property="og:site_name" content="Lhmiao&#39;s Blog">
+<meta property="og:description" content="安装 npm i element-ui - S  引入Element这里仅记录完整引入，按需引入可参加官方文档n 在 main.js 中写入以下内容：1234567891011import Vue from &apos;vue&apos;;import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;import Ap">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-23T13:37:13.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Element UI的使用（一）">
+<meta name="twitter:description" content="安装 npm i element-ui - S  引入Element这里仅记录完整引入，按需引入可参加官方文档n 在 main.js 中写入以下内容：1234567891011import Vue from &apos;vue&apos;;import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;import Ap">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/23/Element-UI的使用（一）/"/>
+
+
+
+
+
+  <title>Element UI的使用（一） | Lhmiao's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lhmiao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/Element-UI的使用（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lhmiao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lhmiao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Element UI的使用（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T10:10:04+08:00">
+                2018-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
+<p>npm i element-ui - S</p>
+</blockquote>
+<h1 id="引入Element"><a href="#引入Element" class="headerlink" title="引入Element"></a>引入Element</h1><p>这里仅记录完整引入，按需引入可参加<a href="http://element-cn.eleme.io/#/zh-CN/component/quickstart" target="_blank" rel="noopener">官方文档</a>n</p>
+<p>在 <em>main.js</em> 中写入以下内容：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>以上代码便完成了 Element 的引入。注意，样式文件需单独引入。</p>
+<h1 id="内置过渡动画的使用"><a href="#内置过渡动画的使用" class="headerlink" title="内置过渡动画的使用"></a>内置过渡动画的使用</h1><h2 id="fade-淡入淡出"><a href="#fade-淡入淡出" class="headerlink" title="fade 淡入淡出"></a>fade 淡入淡出</h2><p>提供 <code>el-fade-in-linear</code> 和 <code>el-fade-in</code> 两种效果<br><br>使用方法如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"el-fade-in-linear"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--以下是要呈现过渡效果的元素--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line">```    </span><br><span class="line"></span><br><span class="line">## zoom缩放</span><br><span class="line">提供 `el-zoom-in-center` , `el-zoom-in-top` 和 `el-zoom-in-bottom` 三种效果<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">使用方法：将 `<span class="tag">&lt;<span class="name">transition</span>&gt;</span>` 标签的 `name` 属性改为以上值即可</span><br><span class="line"></span><br><span class="line">## collapse折叠</span><br><span class="line">使用 `<span class="tag">&lt;<span class="name">el-collapse-transition</span>&gt;</span>` 标签实现折叠效果<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">使用方法：</span><br><span class="line">```html</span><br><span class="line"><span class="tag">&lt;<span class="name">el-collapse-transition</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--待实现折叠效果的元素--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-collapse-transition</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Table-表格"><a href="#Table-表格" class="headerlink" title="Table 表格"></a>Table 表格</h1><h2 id="基础表格"><a href="#基础表格" class="headerlink" title="基础表格"></a>基础表格</h2><p>使用方法：<br><br>HTML部分<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span> <span class="attr">style</span>=<span class="string">"width: 100%"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"date"</span> <span class="attr">label</span>=<span class="string">"日期"</span> <span class="attr">width</span>=<span class="string">"180"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"name"</span> <span class="attr">lable</span>=<span class="string">"姓名"</span> <span class="attr">width</span>=<span class="string">"180"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"address"</span> <span class="attr">lable</span>=<span class="string">"地址"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    data () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">        tableData: [</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            data: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">            name: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">            address: <span class="string">"..."</span></span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">              data: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">              name: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">              address: <span class="string">"..."</span></span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">              data: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">              name: <span class="string">"..."</span>,</span></span><br><span class="line"><span class="javascript">              address: <span class="string">"..."</span></span></span><br><span class="line"><span class="undefined">          &#125;</span></span><br><span class="line"><span class="undefined">        ]</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>说明：当 <code>&lt;el-table&gt;</code> 标签的 <code>data</code> 属性注入对象数组后（<strong>用 <code>v-bind</code> 指令绑定 <code>data</code>属性</strong>），在 <code>&lt;el-table-column&gt;</code> 中用 <code>prop</code> 属性来对应 <code>data</code> 对象中的键名即可填入数据，用 <code>lable</code> 属性来定义表格的列名。用 <code>width</code> 属性来定义列宽（不需要加单位）。</p>
+<h2 id="带斑马纹的表格"><a href="#带斑马纹的表格" class="headerlink" title="带斑马纹的表格"></a>带斑马纹的表格</h2><p><code>&lt;el-table&gt;</code> 标签的 <code>stripe</code> 属性可以创建带斑马纹的表格。它接受一个 <code>Boolean</code>，默认为false，设置为true即为启用。直接加上该属性则表示启用。</p>
+<h2 id="带边框的表格"><a href="#带边框的表格" class="headerlink" title="带边框的表格"></a>带边框的表格</h2><p>默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用 <code>&lt;el-table&gt;</code> 的 <code>border</code> 属性，它接受一个 <code>Boolean</code>，设置为true即为启用。直接加上该属性则表示启用。</p>
+<h2 id="固定表头"><a href="#固定表头" class="headerlink" title="固定表头"></a>固定表头</h2><p>只要在 <code>&lt;el-table&gt;</code> 标签中定义了 <code>height</code> 属性，即可实现固定表头的表格。</p>
+<h2 id="固定列"><a href="#固定列" class="headerlink" title="固定列"></a>固定列</h2><p>在要固定的列对应的 <code>&lt;el-table-column&gt;</code> 标签中使用 <code>fixed</code> 属性，它 <code>Boolean</code> 值或者 <code>left</code> 和 <code>right</code>，表示左边固定还是右边固定。</p>
+<h2 id="设置表格最大高度"><a href="#设置表格最大高度" class="headerlink" title="设置表格最大高度"></a>设置表格最大高度</h2><p>可通过设置 <code>&lt;el-table&gt;</code> 标签的 <code>max-height</code> 属性来为 Table 指定最大高度。此时若表格所需的高度大于最大高度，则会生成一个滚动条。</p>
+<h2 id="多级表头"><a href="#多级表头" class="headerlink" title="多级表头"></a>多级表头</h2><p>数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。<br>只需要在 <code>&lt;el-table-column&gt;</code> 里面嵌套 <code>&lt;el-table-column&gt;</code> ，就可以实现多级表头。最高级的表头对应的 <code>&lt;el-table-column&gt;</code> 可不设置 <code>prop</code> 属性。</p>
+<h2 id="表格排序"><a href="#表格排序" class="headerlink" title="表格排序"></a>表格排序</h2><p>1.在 <code>&lt;el-table&gt;</code> 标签上设置 <code>default-sort</code> 属性（<strong>用 <code>v-bind</code> 指令绑定 <code>default-sort</code> 属性</strong>）设置默认的排序列和排序顺序（升序 ascending 或降序 descending ）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--以 prop 属性指定默认排序列（这里是 date ），order 属性指定默认排序顺序（这里是降序descending）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span> <span class="attr">style</span>=<span class="string">"width: 100%"</span> <span class="attr">:default-sort</span>=<span class="string">"&#123;prop: 'date', order= 'descending'&#125;"</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>注：如果没有指定 <code>order</code> ，则默认排序是 ascendind 升序。<br><br>2.将要提供排序功能的列对应的 <code>&lt;el-table-column&gt;</code> 加上 <code>sortable</code>属性</p>
+<h2 id="格式化列值"><a href="#格式化列值" class="headerlink" title="格式化列值"></a>格式化列值</h2><p>一般来说在后台返回的数据大多是英文或者数字。比如，1代表男；2代表女。在element-ui需要用到 <code>&lt;el-table-column&gt;</code> 的 <code>formatter</code> 属性（<strong>用 <code>v-bind</code> 指令绑定 <code>formatter</code> 属性</strong>），为该属性设定一个方法来处理并返回格式化后的列值。<br><br>例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span> <span class="attr">stripe</span> <span class="attr">border</span> <span class="attr">style</span>=<span class="string">"width: 100%"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"name"</span> <span class="attr">label</span>=<span class="string">"姓名"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"age"</span> <span class="attr">label</span>=<span class="string">"年龄"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"address"</span> <span class="attr">label</span>=<span class="string">"地址"</span> <span class="attr">:formatter</span>=<span class="string">"completeAddress"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    data () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">        tableData: [</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'L'</span>,</span></span><br><span class="line"><span class="undefined">            age: 11,</span></span><br><span class="line"><span class="undefined">            address: 1</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'H'</span>,</span></span><br><span class="line"><span class="undefined">            age: 12,</span></span><br><span class="line"><span class="undefined">            address: 2</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'M'</span>,</span></span><br><span class="line"><span class="undefined">            age: 13,</span></span><br><span class="line"><span class="undefined">            address: 3</span></span><br><span class="line"><span class="undefined">          &#125;</span></span><br><span class="line"><span class="undefined">        ]</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    methods: &#123;</span></span><br><span class="line"><span class="undefined">      completeAddress (row, column) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> <span class="string">`四川省成都市成华区 <span class="subst">$&#123;row.address&#125;</span> 号`</span>; <span class="comment">//以该格式返回该列的值</span></span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>注：<code>formatter</code> 属性的函数类型为 <code>Function(row, column, cellValue, index)</code></p>
+<h2 id="对表格进行过滤"><a href="#对表格进行过滤" class="headerlink" title="对表格进行过滤"></a>对表格进行过滤</h2><p>在 <code>&lt;el-table-column&gt;</code> 中设置 <code>filters</code> 属性和 <code>filter-method</code> 属性（<strong>要用 <code>v-bind</code> 指令绑定这两个属性</strong>）即可开启该列的过滤。<br></p>
+<ul>
+<li><code>filters</code> 是一个数组，数组中的元素要有 <code>text</code> 和 <code>value</code> 属性，即 <code>Array[{text, value}]</code> 。<code>text</code> 是过滤选项的文本，<code>value</code> 是实际的值，只有当该列某行的值 ===  <code>value</code> 时才保留，否则过滤。</li>
+<li><code>filter-method</code>设定一个方法，该方法原型为 <code>Function(value, row, column)</code>，只有当该方法返回 <code>true</code> 时某行才保留，否则过滤。<br>注：这两个属性要一起使用。<br><br>例：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span> <span class="attr">stript</span> <span class="attr">border</span> <span class="attr">:default-sort</span>=<span class="string">"&#123;prop: 'age', order='descending'&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"name"</span> <span class="attr">label</span>=<span class="string">"姓名"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"age"</span> <span class="attr">label</span>=<span class="string">"年龄"</span> <span class="attr">sortable</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:filters</span>=<span class="string">"[&#123;text: 11, value: 11&#125;, &#123;text: 12, value: 12&#125;, &#123;text: 13, value: 13&#125;]"</span> <span class="attr">:filter-method</span>=<span class="string">"filterAge"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    data () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">        tableData: [</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'L'</span>,</span></span><br><span class="line"><span class="undefined">            age: 11</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'H'</span>,</span></span><br><span class="line"><span class="undefined">            age: 12</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'M'</span>,</span></span><br><span class="line"><span class="undefined">            age: 13</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'A'</span>,</span></span><br><span class="line"><span class="undefined">            age: 12</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'B'</span>,</span></span><br><span class="line"><span class="undefined">            age: 11</span></span><br><span class="line"><span class="undefined">          &#125;</span></span><br><span class="line"><span class="undefined">        ]</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    methods: &#123;</span></span><br><span class="line"><span class="undefined">      filterAge (value, row, column) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> property = column[<span class="string">'property'</span>];</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> row[property] === value;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="展开行"><a href="#展开行" class="headerlink" title="展开行"></a>展开行</h2><p>当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。<br><br>通过设置 <code>&lt;el-table-column&gt;</code> 标签的 <code>type=&quot;expand</code> 属性和 <code>Scoped slot</code> 可开启展开行功能，<code>&lt;el-table-column&gt;</code> 的模板会被渲染成为展开行的内容。<br><br>未完待续……</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/24/gulp的简单入门/" rel="next" title="gulp的简单入门">
+                <i class="fa fa-chevron-left"></i> gulp的简单入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Lhmiao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引入Element"><span class="nav-number">2.</span> <span class="nav-text">引入Element</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内置过渡动画的使用"><span class="nav-number">3.</span> <span class="nav-text">内置过渡动画的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fade-淡入淡出"><span class="nav-number">3.1.</span> <span class="nav-text">fade 淡入淡出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Table-表格"><span class="nav-number">4.</span> <span class="nav-text">Table 表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础表格"><span class="nav-number">4.1.</span> <span class="nav-text">基础表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带斑马纹的表格"><span class="nav-number">4.2.</span> <span class="nav-text">带斑马纹的表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带边框的表格"><span class="nav-number">4.3.</span> <span class="nav-text">带边框的表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#固定表头"><span class="nav-number">4.4.</span> <span class="nav-text">固定表头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#固定列"><span class="nav-number">4.5.</span> <span class="nav-text">固定列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置表格最大高度"><span class="nav-number">4.6.</span> <span class="nav-text">设置表格最大高度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多级表头"><span class="nav-number">4.7.</span> <span class="nav-text">多级表头</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格排序"><span class="nav-number">4.8.</span> <span class="nav-text">表格排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化列值"><span class="nav-number">4.9.</span> <span class="nav-text">格式化列值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对表格进行过滤"><span class="nav-number">4.10.</span> <span class="nav-text">对表格进行过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#展开行"><span class="nav-number">4.11.</span> <span class="nav-text">展开行</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lhmiao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
