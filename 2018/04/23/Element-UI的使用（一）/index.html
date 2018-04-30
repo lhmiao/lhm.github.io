@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Lhmiao&#39;s Blog">
 <meta property="og:description" content="安装 npm i element-ui - S  引入Element这里仅记录完整引入，按需引入可参加官方文档n 在 main.js 中写入以下内容：1234567891011import Vue from &apos;vue&apos;;import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;import Ap">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-23T13:37:13.252Z">
+<meta property="og:updated_time" content="2018-04-28T01:26:44.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Element UI的使用（一）">
 <meta name="twitter:description" content="安装 npm i element-ui - S  引入Element这里仅记录完整引入，按需引入可参加官方文档n 在 main.js 中写入以下内容：1234567891011import Vue from &apos;vue&apos;;import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;import Ap">
@@ -320,7 +320,7 @@
 <p>注：<code>formatter</code> 属性的函数类型为 <code>Function(row, column, cellValue, index)</code></p>
 <h2 id="对表格进行过滤"><a href="#对表格进行过滤" class="headerlink" title="对表格进行过滤"></a>对表格进行过滤</h2><p>在 <code>&lt;el-table-column&gt;</code> 中设置 <code>filters</code> 属性和 <code>filter-method</code> 属性（<strong>要用 <code>v-bind</code> 指令绑定这两个属性</strong>）即可开启该列的过滤。<br></p>
 <ul>
-<li><code>filters</code> 是一个数组，数组中的元素要有 <code>text</code> 和 <code>value</code> 属性，即 <code>Array[{text, value}]</code> 。<code>text</code> 是过滤选项的文本，<code>value</code> 是实际的值，只有当该列某行的值 ===  <code>value</code> 时才保留，否则过滤。</li>
+<li><code>filters</code> 是一个数组，数组中的元素要有 <code>text</code> 和 <code>value</code> 属性，即 <code>Array[{text, value}]</code> , <code>filters</code> 数组是一个过滤选项。<code>text</code> 是过滤选项的文本，<code>value</code> 是实际的值，只有当该列某行的值 ===  <code>value</code> 时才保留，否则过滤。</li>
 <li><code>filter-method</code>设定一个方法，该方法原型为 <code>Function(value, row, column)</code>，只有当该方法返回 <code>true</code> 时某行才保留，否则过滤。<br>注：这两个属性要一起使用。<br><br>例：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span> <span class="attr">stript</span> <span class="attr">border</span> <span class="attr">:default-sort</span>=<span class="string">"&#123;prop: 'age', order='descending'&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"name"</span> <span class="attr">label</span>=<span class="string">"姓名"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"age"</span> <span class="attr">label</span>=<span class="string">"年龄"</span> <span class="attr">sortable</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:filters</span>=<span class="string">"[&#123;text: 11, value: 11&#125;, &#123;text: 12, value: 12&#125;, &#123;text: 13, value: 13&#125;]"</span> <span class="attr">:filter-method</span>=<span class="string">"filterAge"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    data () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">        tableData: [</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'L'</span>,</span></span><br><span class="line"><span class="undefined">            age: 11</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'H'</span>,</span></span><br><span class="line"><span class="undefined">            age: 12</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'M'</span>,</span></span><br><span class="line"><span class="undefined">            age: 13</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'A'</span>,</span></span><br><span class="line"><span class="undefined">            age: 12</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">'B'</span>,</span></span><br><span class="line"><span class="undefined">            age: 11</span></span><br><span class="line"><span class="undefined">          &#125;</span></span><br><span class="line"><span class="undefined">        ]</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    methods: &#123;</span></span><br><span class="line"><span class="undefined">      filterAge (value, row, column) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> property = column[<span class="string">'property'</span>];</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> row[property] === value;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -358,6 +358,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/30/Vue自定义事件与slot插槽/" rel="prev" title="Vue自定义事件与slot插槽">
+                Vue自定义事件与slot插槽 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -434,7 +438,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -442,6 +446,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
